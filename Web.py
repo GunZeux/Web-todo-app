@@ -9,6 +9,7 @@ def add_todo():
     todo_local = st.session_state["new_todo"]
     todos.append(todo_local+"\n")
     func.write_todo(todos)
+    st.session_state["new_todo"] = ""
 
 
 st.title("My Todo App")
